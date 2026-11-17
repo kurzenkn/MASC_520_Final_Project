@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="399943da-a1cc-426d-984a-2be222b688ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Final Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MASC 520 Project Analytical Predictions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MASC 520 Project Data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MASC 520 Project Test Data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/channel_variation_GPR.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000746991641087" />
+      <entry key="S5" value="1.0422103194540777" />
+      <entry key="S10" value="1.3568598873464546" />
+      <entry key="S30" value="2.813426892392066" />
+      <entry key="S60" value="4.727117637421447" />
+      <entry key="M2" value="7.815992443255942" />
+      <entry key="M5" value="16.872502686881845" />
+      <entry key="M10" value="37.66789686985888" />
+      <entry key="M15" value="58.85769125777844" />
+      <entry key="M30" value="108.85240118458164" />
+      <entry key="H1" value="167.2803377188965" />
+      <entry key="H2" value="219.2510641143544" />
+      <entry key="H4" value="255.83348861315804" />
+      <entry key="D1" value="294.2494320435952" />
+      <entry key="W1" value="301.72574188566773" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="3.362132486542341E-259" />
+      <entry key="MS500" value="2.0198678871094232E-52" />
+      <entry key="S2" value="1.1921541906079908E-13" />
+      <entry key="S5" value="6.815511649455475E-6" />
+      <entry key="S10" value="0.002817137698297304" />
+      <entry key="S30" value="0.19748071957909274" />
+      <entry key="S60" value="0.615729789552487" />
+      <entry key="M2" value="1.1140532712212705" />
+      <entry key="M5" value="1.8828710137906448" />
+      <entry key="M10" value="2.7365333770938105" />
+      <entry key="M15" value="3.2675182757586585" />
+      <entry key="M30" value="4.1589429615158116" />
+      <entry key="H1" value="5.0501878900574555" />
+      <entry key="H2" value="5.811657555253516" />
+      <entry key="H4" value="6.336389112989174" />
+      <entry key="D1" value="6.877966344113241" />
+      <entry key="W1" value="6.982259790288948" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9138314502294005" />
+      <entry key="MS500" value="0.9821395952633915" />
+      <entry key="S2" value="0.9955786674291036" />
+      <entry key="S5" value="1.0402578932324942" />
+      <entry key="S10" value="1.3579093973868506" />
+      <entry key="S30" value="2.9996334161951954" />
+      <entry key="S60" value="5.31903442396625" />
+      <entry key="M2" value="8.902932680376386" />
+      <entry key="M5" value="18.729737327006553" />
+      <entry key="M10" value="40.3799191540674" />
+      <entry key="M15" value="62.10243614437941" />
+      <entry key="M30" value="112.99273319975167" />
+      <entry key="H1" value="172.31677063132167" />
+      <entry key="H2" value="225.05379011645766" />
+      <entry key="H4" value="262.16468107606596" />
+      <entry key="D1" value="301.12640413114474" />
+      <entry key="W1" value="308.70785607879435" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3M4i4MxIONzCaroMj88w2pBpx6A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.channel_variation_GPR.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="399943da-a1cc-426d-984a-2be222b688ae" name="Changes" comment="" />
+      <created>1794616049293</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794616049293</updated>
+      <workItem from="1794616050369" duration="39000" />
+      <workItem from="1794939765586" duration="4163000" />
+      <workItem from="1794953537906" duration="4382000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Final_Project$channel_variation_GPR.coverage" NAME="channel_variation_GPR Coverage Results" MODIFIED="1794958502606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
