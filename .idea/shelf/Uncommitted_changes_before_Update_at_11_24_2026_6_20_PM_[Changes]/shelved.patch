@@ -1,0 +1,217 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"ALL\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"399943da-a1cc-426d-984a-2be222b688ae\" name=\"Changes\" comment=\"Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;kurzenkn&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/kurzenkn/MASC_520_Final_Project.git&quot;,\r\n    &quot;accountId&quot;: &quot;d98c3535-b66c-4545-876f-730972bbb5db&quot;\r\n  }\r\n}</component>\r\n  <component name=\"McpProjectServerCommands\">\r\n    <commands />\r\n    <urls />\r\n  </component>\r\n  <component name=\"NextEditCompletionFeaturesState\">\r\n    <decayedCancelled>\r\n      <entry key=\"MS100\" value=\"1.0000000000006941\" />\r\n      <entry key=\"MS500\" value=\"1.0072215404187157\" />\r\n      <entry key=\"S2\" value=\"2.1712885618793623\" />\r\n      <entry key=\"S5\" value=\"6.204933526337454\" />\r\n      <entry key=\"S10\" value=\"12.263512173867083\" />\r\n      <entry key=\"S30\" value=\"24.637208529548708\" />\r\n      <entry key=\"S60\" value=\"30.714091655600466\" />\r\n      <entry key=\"M2\" value=\"35.18167802482035\" />\r\n      <entry key=\"M5\" value=\"42.26313302166093\" />\r\n      <entry key=\"M10\" value=\"53.81585699122466\" />\r\n      <entry key=\"M15\" value=\"65.84676071986753\" />\r\n      <entry key=\"M30\" value=\"100.18428088691418\" />\r\n      <entry key=\"H1\" value=\"164.2785496505798\" />\r\n      <entry key=\"H2\" value=\"296.6376940996361\" />\r\n      <entry key=\"H4\" value=\"546.4334772888735\" />\r\n      <entry key=\"D1\" value=\"1304.2827483444373\" />\r\n      <entry key=\"W1\" value=\"1581.291610165253\" />\r\n    </decayedCancelled>\r\n    <decayedSelected>\r\n      <entry key=\"MS100\" value=\"0.0\" />\r\n      <entry key=\"MS500\" value=\"0.0\" />\r\n      <entry key=\"S2\" value=\"0.0\" />\r\n      <entry key=\"S5\" value=\"2.2742273926777822E-254\" />\r\n      <entry key=\"S10\" value=\"2.0993933253660363E-127\" />\r\n      <entry key=\"S30\" value=\"9.40071485092228E-43\" />\r\n      <entry key=\"S60\" value=\"1.3797063787270758E-21\" />\r\n      <entry key=\"M2\" value=\"5.925305410010388E-11\" />\r\n      <entry key=\"M5\" value=\"2.143283115493269E-4\" />\r\n      <entry key=\"M10\" value=\"0.039279416464013985\" />\r\n      <entry key=\"M15\" value=\"0.22883020957062544\" />\r\n      <entry key=\"M30\" value=\"1.412443355711858\" />\r\n      <entry key=\"H1\" value=\"4.379679016792166\" />\r\n      <entry key=\"H2\" value=\"10.948060222203976\" />\r\n      <entry key=\"H4\" value=\"22.806780503198016\" />\r\n      <entry key=\"D1\" value=\"54.94681030088923\" />\r\n      <entry key=\"W1\" value=\"65.90695833263098\" />\r\n    </decayedSelected>\r\n    <decayedShown>\r\n      <entry key=\"MS100\" value=\"0.9726549474129654\" />\r\n      <entry key=\"MS500\" value=\"1.001656133232461\" />\r\n      <entry key=\"S2\" value=\"2.1680751662093134\" />\r\n      <entry key=\"S5\" value=\"6.201061807445151\" />\r\n      <entry key=\"S10\" value=\"12.259654207121445\" />\r\n      <entry key=\"S30\" value=\"24.63460835209045\" />\r\n      <entry key=\"S60\" value=\"30.71239051292668\" />\r\n      <entry key=\"M2\" value=\"35.1800381985592\" />\r\n      <entry key=\"M5\" value=\"42.25940919455423\" />\r\n      <entry key=\"M10\" value=\"53.84490737448042\" />\r\n      <entry key=\"M15\" value=\"66.06025387994075\" />\r\n      <entry key=\"M30\" value=\"101.57416547583385\" />\r\n      <entry key=\"H1\" value=\"168.63325427194255\" />\r\n      <entry key=\"H2\" value=\"307.56036417314795\" />\r\n      <entry key=\"H4\" value=\"569.2161455627948\" />\r\n      <entry key=\"D1\" value=\"1359.2203120492557\" />\r\n      <entry key=\"W1\" value=\"1647.1969913958483\" />\r\n    </decayedShown>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8,\r\n  &quot;fromUser&quot;: false\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3M4i4MxIONzCaroMj88w2pBpx6A\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;Python.channel_variation_GPR.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\r\n    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,\r\n    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,\r\n    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"399943da-a1cc-426d-984a-2be222b688ae\" name=\"Changes\" comment=\"\" />\r\n      <created>1794616049293</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1794616049293</updated>\r\n      <workItem from=\"1794616050369\" duration=\"39000\" />\r\n      <workItem from=\"1794939765586\" duration=\"4163000\" />\r\n      <workItem from=\"1794953537906\" duration=\"4896000\" />\r\n      <workItem from=\"1795027711566\" duration=\"11699000\" />\r\n      <workItem from=\"1795116298773\" duration=\"1314000\" />\r\n      <workItem from=\"1795128418295\" duration=\"6465000\" />\r\n      <workItem from=\"1795201713635\" duration=\"8589000\" />\r\n      <workItem from=\"1795217474062\" duration=\"1142000\" />\r\n      <workItem from=\"1795467086447\" duration=\"8752000\" />\r\n      <workItem from=\"1795566232347\" duration=\"6009000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First commit. Includes project data and outline of project code.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1794958786652</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1794958786652</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Second commit. Added Gaussian process regression and plotting of results.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1795218558362</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1795218558362</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1795572148218</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1795572148218</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"First commit. Includes project data and outline of project code.\" />\r\n    <MESSAGE value=\"Second commit. Added Gaussian process regression and plotting of results.\" />\r\n    <MESSAGE value=\"Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale.\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/Final_Project$channel_variation_GPR.coverage\" NAME=\"channel_variation_GPR Coverage Results\" MODIFIED=\"1795571871814\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8f5a28bfb2a359d869194baae35e5a57cce96f24)
++++ b/.idea/workspace.xml	(date 1795572942517)
+@@ -4,9 +4,7 @@
+     <option name="autoReloadType" value="ALL" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="399943da-a1cc-426d-984a-2be222b688ae" name="Changes" comment="Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale.">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="399943da-a1cc-426d-984a-2be222b688ae" name="Changes" comment="Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale." />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -20,6 +18,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -40,61 +43,61 @@
+   </component>
+   <component name="NextEditCompletionFeaturesState">
+     <decayedCancelled>
+-      <entry key="MS100" value="1.0000000000006941" />
+-      <entry key="MS500" value="1.0072215404187157" />
+-      <entry key="S2" value="2.1712885618793623" />
+-      <entry key="S5" value="6.204933526337454" />
+-      <entry key="S10" value="12.263512173867083" />
+-      <entry key="S30" value="24.637208529548708" />
+-      <entry key="S60" value="30.714091655600466" />
+-      <entry key="M2" value="35.18167802482035" />
+-      <entry key="M5" value="42.26313302166093" />
+-      <entry key="M10" value="53.81585699122466" />
+-      <entry key="M15" value="65.84676071986753" />
+-      <entry key="M30" value="100.18428088691418" />
+-      <entry key="H1" value="164.2785496505798" />
+-      <entry key="H2" value="296.6376940996361" />
+-      <entry key="H4" value="546.4334772888735" />
+-      <entry key="D1" value="1304.2827483444373" />
+-      <entry key="W1" value="1581.291610165253" />
++      <entry key="MS100" value="1.0092774950266874" />
++      <entry key="MS500" value="2.269074941373994" />
++      <entry key="S2" value="6.638419441440677" />
++      <entry key="S5" value="11.840649330752743" />
++      <entry key="S10" value="15.45384180187455" />
++      <entry key="S30" value="18.875840849566732" />
++      <entry key="S60" value="19.99669976358815" />
++      <entry key="M2" value="22.427247397571172" />
++      <entry key="M5" value="34.164143912734055" />
++      <entry key="M10" value="51.17870354560459" />
++      <entry key="M15" value="65.81420038453832" />
++      <entry key="M30" value="103.6814966548205" />
++      <entry key="H1" value="170.25529352264445" />
++      <entry key="H2" value="303.7573129125177" />
++      <entry key="H4" value="554.5000795043353" />
++      <entry key="D1" value="1320.0872753459078" />
++      <entry key="W1" value="1601.390250633922" />
+     </decayedCancelled>
+     <decayedSelected>
+       <entry key="MS100" value="0.0" />
+       <entry key="MS500" value="0.0" />
+       <entry key="S2" value="0.0" />
+-      <entry key="S5" value="2.2742273926777822E-254" />
+-      <entry key="S10" value="2.0993933253660363E-127" />
+-      <entry key="S30" value="9.40071485092228E-43" />
+-      <entry key="S60" value="1.3797063787270758E-21" />
+-      <entry key="M2" value="5.925305410010388E-11" />
+-      <entry key="M5" value="2.143283115493269E-4" />
+-      <entry key="M10" value="0.039279416464013985" />
+-      <entry key="M15" value="0.22883020957062544" />
+-      <entry key="M30" value="1.412443355711858" />
+-      <entry key="H1" value="4.379679016792166" />
+-      <entry key="H2" value="10.948060222203976" />
+-      <entry key="H4" value="22.806780503198016" />
+-      <entry key="D1" value="54.94681030088923" />
+-      <entry key="W1" value="65.90695833263098" />
++      <entry key="S5" value="2.5580054863781767E-284" />
++      <entry key="S10" value="2.2265251483439607E-142" />
++      <entry key="S30" value="9.586766371487937E-48" />
++      <entry key="S60" value="4.4059777968070746E-24" />
++      <entry key="M2" value="3.3484094296724766E-12" />
++      <entry key="M5" value="6.7909521297364E-5" />
++      <entry key="M10" value="0.02211009407738573" />
++      <entry key="M15" value="0.15600208415560282" />
++      <entry key="M30" value="1.166217518823382" />
++      <entry key="H1" value="3.979665252081776" />
++      <entry key="H2" value="10.436125857107063" />
++      <entry key="H4" value="22.267171189610828" />
++      <entry key="D1" value="54.727968896567624" />
++      <entry key="W1" value="65.8693951195064" />
+     </decayedSelected>
+     <decayedShown>
+-      <entry key="MS100" value="0.9726549474129654" />
+-      <entry key="MS500" value="1.001656133232461" />
+-      <entry key="S2" value="2.1680751662093134" />
+-      <entry key="S5" value="6.201061807445151" />
+-      <entry key="S10" value="12.259654207121445" />
+-      <entry key="S30" value="24.63460835209045" />
+-      <entry key="S60" value="30.71239051292668" />
+-      <entry key="M2" value="35.1800381985592" />
+-      <entry key="M5" value="42.25940919455423" />
+-      <entry key="M10" value="53.84490737448042" />
+-      <entry key="M15" value="66.06025387994075" />
+-      <entry key="M30" value="101.57416547583385" />
+-      <entry key="H1" value="168.63325427194255" />
+-      <entry key="H2" value="307.56036417314795" />
+-      <entry key="H4" value="569.2161455627948" />
+-      <entry key="D1" value="1359.2203120492557" />
+-      <entry key="W1" value="1647.1969913958483" />
++      <entry key="MS100" value="0.9817333386281211" />
++      <entry key="MS500" value="2.2572667253018976" />
++      <entry key="S2" value="6.629586140279536" />
++      <entry key="S5" value="11.83403697541891" />
++      <entry key="S10" value="15.449440315272211" />
++      <entry key="S30" value="18.874024998472187" />
++      <entry key="S60" value="19.995734109397823" />
++      <entry key="M2" value="22.426660786707725" />
++      <entry key="M5" value="34.162763026288175" />
++      <entry key="M10" value="51.19495471395551" />
++      <entry key="M15" value="65.95967911548844" />
++      <entry key="M30" value="104.82905416798431" />
++      <entry key="H1" value="174.21224846430482" />
++      <entry key="H2" value="314.1692274036687" />
++      <entry key="H4" value="576.7437047260686" />
++      <entry key="D1" value="1374.8060337676657" />
++      <entry key="W1" value="1667.2580694493965" />
+     </decayedShown>
+   </component>
+   <component name="ProjectColorInfo">{
+@@ -106,27 +109,27 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;Python.channel_variation_GPR.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "Python.channel_variation_GPR.executor": "Run",
++    "RunOnceActivity.MCP Project settings loaded": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
++    "codeWithMe.voiceChat.enabledByDefault": "false",
++    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
++    "git-widget-placeholder": "validations-metrics",
++    "junie.onboarding.icon.badge.shown": "true",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "preferences.keymap",
++    "to.speed.mode.migration.done": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -150,7 +153,7 @@
+       <workItem from="1795201713635" duration="8589000" />
+       <workItem from="1795217474062" duration="1142000" />
+       <workItem from="1795467086447" duration="8752000" />
+-      <workItem from="1795566232347" duration="6009000" />
++      <workItem from="1795566232347" duration="6358000" />
+     </task>
+     <task id="LOCAL-00001" summary="First commit. Includes project data and outline of project code.">
+       <option name="closed" value="true" />
+@@ -176,7 +179,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1795572148218</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale.">
++      <option name="closed" value="true" />
++      <created>1795572650477</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1795572650477</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">

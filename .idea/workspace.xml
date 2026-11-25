@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="399943da-a1cc-426d-984a-2be222b688ae" name="Changes" comment="Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/channel_variation_GPR.py" beforeDir="false" afterPath="$PROJECT_DIR$/channel_variation_GPR.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,73 +29,73 @@
     &quot;assignee&quot;: &quot;kurzenkn&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kurzenkn/MASC_520_Final_Project.git",
-    "accountId": "b57fe081-db46-4b7c-8642-6557154dd52b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kurzenkn/MASC_520_Final_Project.git&quot;,
+    &quot;accountId&quot;: &quot;d98c3535-b66c-4545-876f-730972bbb5db&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000006941" />
-      <entry key="MS500" value="1.0072215404187157" />
-      <entry key="S2" value="2.1712885618793623" />
-      <entry key="S5" value="6.204933526337454" />
-      <entry key="S10" value="12.263512173867083" />
-      <entry key="S30" value="24.637208529548708" />
-      <entry key="S60" value="30.714091655600466" />
-      <entry key="M2" value="35.18167802482035" />
-      <entry key="M5" value="42.26313302166093" />
-      <entry key="M10" value="53.81585699122466" />
-      <entry key="M15" value="65.84676071986753" />
-      <entry key="M30" value="100.18428088691418" />
-      <entry key="H1" value="164.2785496505798" />
-      <entry key="H2" value="296.6376940996361" />
-      <entry key="H4" value="546.4334772888735" />
-      <entry key="D1" value="1304.2827483444373" />
-      <entry key="W1" value="1581.291610165253" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000659524115" />
+      <entry key="S2" value="1.0164413907498207" />
+      <entry key="S5" value="1.2358193171009062" />
+      <entry key="S10" value="1.648663679454312" />
+      <entry key="S30" value="2.629751688906955" />
+      <entry key="S60" value="4.537222783201176" />
+      <entry key="M2" value="9.570330754772835" />
+      <entry key="M5" value="25.335084309176132" />
+      <entry key="M10" value="45.222385067682914" />
+      <entry key="M15" value="61.21799760999912" />
+      <entry key="M30" value="100.81764017424213" />
+      <entry key="H1" value="168.49606626265728" />
+      <entry key="H2" value="302.56436903441244" />
+      <entry key="H4" value="553.6741716941104" />
+      <entry key="D1" value="1320.9907065099383" />
+      <entry key="W1" value="1603.2007479827869" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="2.2742273926777822E-254" />
-      <entry key="S10" value="2.0993933253660363E-127" />
-      <entry key="S30" value="9.40071485092228E-43" />
-      <entry key="S60" value="1.3797063787270758E-21" />
-      <entry key="M2" value="5.925305410010388E-11" />
-      <entry key="M5" value="2.143283115493269E-4" />
-      <entry key="M10" value="0.039279416464013985" />
-      <entry key="M15" value="0.22883020957062544" />
-      <entry key="M30" value="1.412443355711858" />
-      <entry key="H1" value="4.379679016792166" />
-      <entry key="H2" value="10.948060222203976" />
-      <entry key="H4" value="22.806780503198016" />
-      <entry key="D1" value="54.94681030088923" />
-      <entry key="W1" value="65.90695833263098" />
+      <entry key="S5" value="1.921706388138906E-290" />
+      <entry key="S10" value="1.9298359211141163E-145" />
+      <entry key="S30" value="9.14049546447517E-49" />
+      <entry key="S60" value="1.360476677496096E-24" />
+      <entry key="M2" value="1.8606425772276373E-12" />
+      <entry key="M5" value="5.368592353102732E-5" />
+      <entry key="M10" value="0.019658730552615376" />
+      <entry key="M15" value="0.14424706553859773" />
+      <entry key="M30" value="1.121418856174429" />
+      <entry key="H1" value="3.9024800333982164" />
+      <entry key="H2" value="10.334426509838018" />
+      <entry key="H4" value="22.158409526456435" />
+      <entry key="D1" value="54.68332578292646" />
+      <entry key="W1" value="65.86171650862354" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9726549474129654" />
-      <entry key="MS500" value="1.001656133232461" />
-      <entry key="S2" value="2.1680751662093134" />
-      <entry key="S5" value="6.201061807445151" />
-      <entry key="S10" value="12.259654207121445" />
-      <entry key="S30" value="24.63460835209045" />
-      <entry key="S60" value="30.71239051292668" />
-      <entry key="M2" value="35.1800381985592" />
-      <entry key="M5" value="42.25940919455423" />
-      <entry key="M10" value="53.84490737448042" />
-      <entry key="M15" value="66.06025387994075" />
-      <entry key="M30" value="101.57416547583385" />
-      <entry key="H1" value="168.63325427194255" />
-      <entry key="H2" value="307.56036417314795" />
-      <entry key="H4" value="569.2161455627948" />
-      <entry key="D1" value="1359.2203120492557" />
-      <entry key="W1" value="1647.1969913958483" />
+      <entry key="MS100" value="4.1566600392770854E-8" />
+      <entry key="MS500" value="0.03340025014125234" />
+      <entry key="S2" value="0.4435897203153953" />
+      <entry key="S5" value="0.9386165884832012" />
+      <entry key="S10" value="1.471043150495203" />
+      <entry key="S30" value="2.5469860813953864" />
+      <entry key="S60" value="4.474220967478887" />
+      <entry key="M2" value="9.519361269859136" />
+      <entry key="M5" value="25.302430497593907" />
+      <entry key="M10" value="45.21793229275779" />
+      <entry key="M15" value="61.339078916765445" />
+      <entry key="M30" value="101.91393923121925" />
+      <entry key="H1" value="172.37256480184823" />
+      <entry key="H2" value="312.8729323045969" />
+      <entry key="H4" value="575.8081982091418" />
+      <entry key="D1" value="1375.6646695119248" />
+      <entry key="W1" value="1669.0608655116073" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -116,50 +117,21 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "validations-metrics",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
     "settings.editor.selected.configurable": "preferences.keymap",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="channel_variation_GPR" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Final Project" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="RUN_AS_SCRIPT" value="false" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/channel_variation_GPR.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-56aff7b04f6f-JavaScript-PY-263.7307.329" />
-        <option value="bundled-python-sdk-9e1d95ea72ba-e0583fc556d1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-263.7307.329" />
+        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
       </set>
     </attachedChunks>
   </component>
@@ -229,6 +201,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added calculation of validation metrics. Fixed overfitting with squared exponential kernel by adding a prior lengthscale." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Final_Project$channel_variation_GPR.coverage" NAME="channel_variation_GPR Coverage Results" MODIFIED="1795571871814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Final_Project$channel_variation_GPR.coverage" NAME="channel_variation_GPR Coverage Results" MODIFIED="1795573878260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
