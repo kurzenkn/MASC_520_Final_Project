@@ -662,11 +662,36 @@ def plot_fit_comparison(
     plt.show()
 
 
-def calc_model_validation_metrics():
+def calc_model_validation_metrics(model, p_test, q_test, p, q):
     """Compute the metrics for model validation with the test points. Metrics include
-    the coefficient of determination (R^2), normalized mean square error (NMSE),
-    and mean log-likelihood (MLL)."""
+    the coefficient of determination (R^2), relative root-mean-square error (rRMSE),
+    and mean log predictive density (MLPD)."""
 
+    #   Compute predicted values at test pressures
+    q_pred_test, q_test_var = model.predict_y(p_test)
+    q_pred, q_var = model.predict_y(p)
+
+    #   Compute R^2
+    ss_res = np.sum((q - q_pred)**2)
+    ss_tot = np.sum((q - np.mean(q))**2)
+    r_2 = 1 - ss_res/ss_tot
+
+    #   Compute R^2 pred
+    ss_res_test = np.sum((q_test - q_pred_test) ** 2)
+    ss_tot_test = np.sum((q_test - np.mean(q_test)) ** 2)
+    r_2_test = 1 - ss_res_test/ss_tot_test
+
+    #   Compute relative root-mean-square error
+    rrmse = np.sqrt(np.mean((q_test - q_pred_test) ** 2)) / np.mean(q_test)
+
+    #   Compute mean relative variance
+    rel_error = np.mean(1.96*np.sqrt(q_var)/q_pred)
+
+    #   Compute mean log predictive density
+    log_densities = model.predict_log_density((p_test, q_test))
+    mlpd = np.mean(log_densities.numpy())
+
+    return r_2, r_2_test, rrmse, rel_error, mlpd
 
 def main():
     """Call functions to perform Gaussian Process Regression and plot results."""
@@ -676,7 +701,7 @@ def main():
 
     #   Call functions for Gaussian Process Regression for channels
     lin_gpr_1, lin_gpr_2, lin_gpr_3, lin_gpr_4, lin_gpr_234 = get_gpr_models(gpf.kernels.Linear() + gpf.kernels.Bias())
-    nonlin_gpr_1, nonlin_gpr_2, nonlin_gpr_3, nonlin_gpr_4, nonlin_gpr_234 = get_gpr_models(gpf.kernels.SquaredExponential())
+    nonlin_gpr_1, nonlin_gpr_2, nonlin_gpr_3, nonlin_gpr_4, nonlin_gpr_234 = get_gpr_models(gpf.kernels.SquaredExponential(lengthscales=5.0))
     poly_gpr_1, poly_gpr_2, poly_gpr_3, poly_gpr_4, poly_gpr_234 = get_gpr_models(gpf.kernels.Polynomial())
     # Linear regression fits
     (
@@ -714,9 +739,70 @@ def main():
 
     #   Call functions for Gaussian Process Regression for total flow rate correction
     lin_correction = get_gpr_correction(gpf.kernels.Linear() + gpf.kernels.Linear())
-    nonlin_correction = get_gpr_correction(gpf.kernels.SquaredExponential())
+    nonlin_correction = get_gpr_correction(gpf.kernels.SquaredExponential(lengthscales=5.0))
     poly_correction = get_gpr_correction(gpf.kernels.Polynomial())
     plot_correction(lin_correction, nonlin_correction, poly_correction)
+
+    #   Validate models
+    models = {
+        "Linear GPR": {1: lin_gpr_1, 2: lin_gpr_2, 3: lin_gpr_3, 4: lin_gpr_4, 234: lin_gpr_234},
+        "Squared Exponential GPR": {1: nonlin_gpr_1, 2: nonlin_gpr_2, 3: nonlin_gpr_3, 4: nonlin_gpr_4, 234: nonlin_gpr_234},
+        "Polynomial GPR": {1: poly_gpr_1, 2: poly_gpr_2, 3: poly_gpr_3, 4: poly_gpr_4, 234: poly_gpr_234}
+    }
+
+    p_test = {
+        1: p1_test,
+        2: p2_test,
+        3: p3_test,
+        4: p4_test,
+        234: p234_test
+    }
+
+    q_test = {
+        1: q1_test,
+        2: q2_test,
+        3: q3_test,
+        4: q4_test,
+        234: q234_test
+    }
+
+    p = {
+        1: p1,
+        2: p2,
+        3: p3,
+        4: p4,
+        234: p234
+    }
+
+    q = {
+        1: q1,
+        2: q2,
+        3: q3,
+        4: q4,
+        234: q234
+    }
+
+
+    rows = []
+
+    for model_name, channel_model in models.items():
+        for channel, model in channel_model.items():
+            r_2, r_2_test, rrmse, rel_err, mlpd = calc_model_validation_metrics(model, p_test[channel], q_test[channel], p[channel], q[channel])
+
+            rows.append({
+                "Model": model_name,
+                "Channel": channel,
+                "R^2": r_2,
+                "R^2 (pred.)": r_2_test,
+                "rRMSE": rrmse,
+                "Rel. Error": rel_err,
+                "MLPD": mlpd,
+            })
+
+    validation_results = pd.DataFrame(rows).set_index(["Model", "Channel"])
+
+    print(validation_results)
+    print(validation_results.to_latex(sparsify=True, multirow=False,float_format="%.3f"))
 
 
 if __name__ == "__main__":
