@@ -284,16 +284,382 @@ def plot_correction(lin_corr, nonlin_corr, poly_corr):
     fig_corr.show()
 
 def get_lin_reg_eqs():
-    """Get linear regression fits of the flow rate against input pressure for each of the channels,
-     all four channels together, and channels 2-4 together."""
+    """Get linear regression fits of the flow rate against input pressure
+    for each of the channels, all four channels together, and channels
+    2-4 together."""
+
+    # Combine all four channels
+    p1234 = np.vstack((p1, p2, p3, p4))
+    q1234 = np.vstack((q1, q2, q3, q4))
+
+    # Perform linear regression
+    lin_reg_1 = linregress(p1[:, 0], q1[:, 0])
+    lin_reg_2 = linregress(p2[:, 0], q2[:, 0])
+    lin_reg_3 = linregress(p3[:, 0], q3[:, 0])
+    lin_reg_4 = linregress(p4[:, 0], q4[:, 0])
+
+    lin_reg_1234 = linregress(
+        p1234[:, 0],
+        q1234[:, 0]
+    )
+
+    lin_reg_234 = linregress(
+        p234[:, 0],
+        q234[:, 0]
+    )
+
+    # Print equations and R^2 values
+    regressions = {
+        "Channel 1": lin_reg_1,
+        "Channel 2": lin_reg_2,
+        "Channel 3": lin_reg_3,
+        "Channel 4": lin_reg_4,
+        "All Channels": lin_reg_1234,
+        "Channels 2-4": lin_reg_234
+    }
+
+    print("\nLINEAR REGRESSION RESULTS")
+    print("-" * 60)
+
+    for name, reg in regressions.items():
+
+        print(
+            f"{name}: "
+            f"q = {reg.slope:.5f}p "
+            f"{reg.intercept:+.5f}, "
+            f"R^2 = {reg.rvalue**2:.4f}"
+        )
+
+    return (
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4,
+        lin_reg_1234,
+        lin_reg_234
+    )
 
 
-def plot_lin_regress_results():
+def plot_lin_regress_results(
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4,
+        lin_reg_234):
     """Plot the results of the linear regression fit."""
 
+    # Pressure range for plotting regression lines
+    p_plot = np.linspace(79, 121, 100)
 
-def plot_fit_comparison():
-    """Plot a comparison of the GPR and linear regression fits."""
+    # Store channel information
+    channel_data = [
+        (
+            p1,
+            q1,
+            p1_test,
+            q1_test,
+            lin_reg_1,
+            "Channel 1"
+        ),
+        (
+            p2,
+            q2,
+            p2_test,
+            q2_test,
+            lin_reg_2,
+            "Channel 2"
+        ),
+        (
+            p3,
+            q3,
+            p3_test,
+            q3_test,
+            lin_reg_3,
+            "Channel 3"
+        ),
+        (
+            p4,
+            q4,
+            p4_test,
+            q4_test,
+            lin_reg_4,
+            "Channel 4"
+        )
+    ]
+
+    # Create 2 x 2 plot
+    fig, ax = plt.subplots(
+        2,
+        2,
+        figsize=(10, 7),
+        layout="constrained"
+    )
+
+    # Plot each channel
+    for axis, data in zip(ax.flat, channel_data):
+
+        (
+            p,
+            q,
+            p_test,
+            q_test,
+            reg,
+            title
+        ) = data
+
+        # Predicted flow rate from linear regression
+        q_pred = (
+            reg.slope * p_plot
+            + reg.intercept
+        )
+
+        # Training data
+        axis.scatter(
+            p[:, 0],
+            q[:, 0],
+            color="black",
+            marker="x",
+            label="Measured"
+        )
+
+        # Test data
+        axis.scatter(
+            p_test[:, 0],
+            q_test[:, 0],
+            color="red",
+            marker="o",
+            label="Test"
+        )
+
+        # Linear regression line
+        axis.plot(
+            p_plot,
+            q_pred,
+            color="blue",
+            label="Linear Regression"
+        )
+
+        # Regression equation
+        equation = (
+            f"q = {reg.slope:.4f}p "
+            f"{reg.intercept:+.4f}\n"
+            f"$R^2$ = {reg.rvalue**2:.4f}"
+        )
+
+        axis.text(
+            0.05,
+            0.95,
+            equation,
+            transform=axis.transAxes,
+            verticalalignment="top"
+        )
+
+        axis.set_title(title)
+        axis.set_xlabel("Pressure (mbar)")
+        axis.set_ylabel("Flow Rate (mL/min)")
+        axis.grid(True)
+
+    # Common legend
+    handles, labels = (
+        ax[0, 0].get_legend_handles_labels()
+    )
+
+    fig.legend(
+        handles,
+        labels,
+        loc="outside right upper"
+    )
+
+    fig.suptitle(
+        "Linear Regression of Flow Rate vs. Pressure",
+        fontsize=20
+    )
+
+    plt.show()
+
+    # =====================================================
+    # Channels 2-4 combined
+    # =====================================================
+
+    q234_pred = (
+        lin_reg_234.slope * p_plot
+        + lin_reg_234.intercept
+    )
+
+    fig234, ax234 = plt.subplots(
+        figsize=(8, 6),
+        layout="constrained"
+    )
+
+    # Training data
+    ax234.scatter(
+        p234[:, 0],
+        q234[:, 0],
+        color="black",
+        marker="x",
+        label="Measured"
+    )
+
+    # Test data
+    ax234.scatter(
+        p234_test[:, 0],
+        q234_test[:, 0],
+        color="red",
+        marker="o",
+        label="Test"
+    )
+
+    # Regression line
+    ax234.plot(
+        p_plot,
+        q234_pred,
+        color="blue",
+        label="Linear Regression"
+    )
+
+    # Equation and R^2
+    equation234 = (
+        f"q = {lin_reg_234.slope:.4f}p "
+        f"{lin_reg_234.intercept:+.4f}\n"
+        f"$R^2$ = {lin_reg_234.rvalue**2:.4f}"
+    )
+
+    ax234.text(
+        0.05,
+        0.95,
+        equation234,
+        transform=ax234.transAxes,
+        verticalalignment="top"
+    )
+
+    ax234.set_xlabel("Pressure (mbar)")
+    ax234.set_ylabel("Flow Rate (mL/min)")
+    ax234.set_title(
+        "Linear Regression - Channels 2, 3, and 4"
+    )
+
+    ax234.grid(True)
+    ax234.legend()
+
+    plt.show()
+
+
+def plot_fit_comparison(
+        gpr1,
+        gpr2,
+        gpr3,
+        gpr4,
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4):
+    """Compare GPR predictions and uncertainty with linear regression fits."""
+
+    # Pressure range for predictions
+    p_plot = np.linspace(79, 121, 100)[:, None]
+
+    # Models for each channel
+    channel_models = [
+        (gpr1, lin_reg_1, "Channel 1"),
+        (gpr2, lin_reg_2, "Channel 2"),
+        (gpr3, lin_reg_3, "Channel 3"),
+        (gpr4, lin_reg_4, "Channel 4")
+    ]
+
+    # Create 2 x 2 plot
+    fig, ax = plt.subplots(
+        2,
+        2,
+        figsize=(10, 7),
+        layout="constrained"
+    )
+
+    for axis, (gpr, lin_reg, title) in zip(
+            ax.flat, channel_models):
+
+        # GPR prediction
+        gpr_mean, gpr_var = gpr.predict_y(p_plot)
+
+        gpr_mean = gpr_mean.numpy().flatten()
+        gpr_var = gpr_var.numpy().flatten()
+
+        # 95% predictive interval
+        gpr_std = np.sqrt(gpr_var)
+
+        gpr_low = gpr_mean - 1.96 * gpr_std
+        gpr_up = gpr_mean + 1.96 * gpr_std
+
+        # Linear regression prediction
+        lin_mean = (
+            lin_reg.slope * p_plot[:, 0]
+            + lin_reg.intercept
+        )
+
+        # GPR mean
+        axis.plot(
+            p_plot[:, 0],
+            gpr_mean,
+            color="blue",
+            label="GPR Mean"
+        )
+
+        # GPR lower bound
+        axis.plot(
+            p_plot[:, 0],
+            gpr_low,
+            "--",
+            color="blue"
+        )
+
+        # GPR upper bound
+        axis.plot(
+            p_plot[:, 0],
+            gpr_up,
+            "--",
+            color="blue"
+        )
+
+        # GPR uncertainty region
+        axis.fill_between(
+            p_plot[:, 0],
+            gpr_low,
+            gpr_up,
+            color="blue",
+            alpha=0.10,
+            label="GPR 95% Predictive Interval"
+        )
+
+        # Linear regression
+        axis.plot(
+            p_plot[:, 0],
+            lin_mean,
+            color="red",
+            linestyle="--",
+            linewidth=2,
+            label="Linear Regression"
+        )
+
+        # Formatting
+        axis.set_title(title)
+        axis.set_xlabel("Pressure (mbar)")
+        axis.set_ylabel("Flow Rate (mL/min)")
+        axis.grid(True)
+
+    # Common legend
+    handles, labels = ax[0, 0].get_legend_handles_labels()
+
+    fig.legend(
+        handles,
+        labels,
+        loc="outside right upper"
+    )
+
+    fig.suptitle(
+        "GPR and Linear Regression Comparison",
+        fontsize=20
+    )
+
+    plt.show()
 
 
 def calc_model_validation_metrics(model, p_test, q_test, p, q):
@@ -337,6 +703,36 @@ def main():
     lin_gpr_1, lin_gpr_2, lin_gpr_3, lin_gpr_4, lin_gpr_234 = get_gpr_models(gpf.kernels.Linear() + gpf.kernels.Bias())
     nonlin_gpr_1, nonlin_gpr_2, nonlin_gpr_3, nonlin_gpr_4, nonlin_gpr_234 = get_gpr_models(gpf.kernels.SquaredExponential(lengthscales=5.0))
     poly_gpr_1, poly_gpr_2, poly_gpr_3, poly_gpr_4, poly_gpr_234 = get_gpr_models(gpf.kernels.Polynomial())
+    # Linear regression fits
+    (
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4,
+        lin_reg_1234,
+        lin_reg_234
+    ) = get_lin_reg_eqs()
+
+    # Plot linear regression results
+    plot_lin_regress_results(
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4,
+        lin_reg_234
+    )
+
+    # Compare squared-exponential GPR with linear regression
+    plot_fit_comparison(
+        nonlin_gpr_1,
+        nonlin_gpr_2,
+        nonlin_gpr_3,
+        nonlin_gpr_4,
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4
+    )
     plot_gpr_results(lin_gpr_1, lin_gpr_2, lin_gpr_3, lin_gpr_4, lin_gpr_234, "Linear + Bias Kernel")
     plot_gpr_results(nonlin_gpr_1, nonlin_gpr_2, nonlin_gpr_3, nonlin_gpr_4, nonlin_gpr_234, "Squared Exponential Kernel")
     plot_gpr_results(poly_gpr_1, poly_gpr_2, poly_gpr_3, poly_gpr_4, poly_gpr_234, "Polynomial Kernel")
