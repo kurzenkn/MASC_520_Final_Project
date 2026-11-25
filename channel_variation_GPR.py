@@ -552,7 +552,8 @@ def plot_fit_comparison(
         lin_reg_1,
         lin_reg_2,
         lin_reg_3,
-        lin_reg_4):
+        lin_reg_4,
+        fig_title):
     """Compare GPR predictions and uncertainty with linear regression fits."""
 
     # Pressure range for predictions
@@ -655,7 +656,7 @@ def plot_fit_comparison(
     )
 
     fig.suptitle(
-        "GPR and Linear Regression Comparison",
+        fig_title,
         fontsize=20
     )
 
@@ -703,6 +704,7 @@ def main():
     lin_gpr_1, lin_gpr_2, lin_gpr_3, lin_gpr_4, lin_gpr_234 = get_gpr_models(gpf.kernels.Linear() + gpf.kernels.Bias())
     nonlin_gpr_1, nonlin_gpr_2, nonlin_gpr_3, nonlin_gpr_4, nonlin_gpr_234 = get_gpr_models(gpf.kernels.SquaredExponential(lengthscales=5.0))
     poly_gpr_1, poly_gpr_2, poly_gpr_3, poly_gpr_4, poly_gpr_234 = get_gpr_models(gpf.kernels.Polynomial())
+
     # Linear regression fits
     (
         lin_reg_1,
@@ -722,7 +724,31 @@ def main():
         lin_reg_234
     )
 
-    # Compare squared-exponential GPR with linear regression
+    # Compare GPR fits with linear regression fits
+    plot_fit_comparison(
+        lin_gpr_1,
+        lin_gpr_2,
+        lin_gpr_3,
+        lin_gpr_4,
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4,
+        "Linear + Bias Kernel vs. Linear Regression",
+    )
+
+    plot_fit_comparison(
+        poly_gpr_1,
+        poly_gpr_2,
+        poly_gpr_3,
+        poly_gpr_4,
+        lin_reg_1,
+        lin_reg_2,
+        lin_reg_3,
+        lin_reg_4,
+        "Polynomial Kernel vs. Linear Regression",
+    )
+
     plot_fit_comparison(
         nonlin_gpr_1,
         nonlin_gpr_2,
@@ -731,8 +757,10 @@ def main():
         lin_reg_1,
         lin_reg_2,
         lin_reg_3,
-        lin_reg_4
+        lin_reg_4,
+        "Squared Exponential Kernel vs. Linear Regression",
     )
+
     plot_gpr_results(lin_gpr_1, lin_gpr_2, lin_gpr_3, lin_gpr_4, lin_gpr_234, "Linear + Bias Kernel")
     plot_gpr_results(nonlin_gpr_1, nonlin_gpr_2, nonlin_gpr_3, nonlin_gpr_4, nonlin_gpr_234, "Squared Exponential Kernel")
     plot_gpr_results(poly_gpr_1, poly_gpr_2, poly_gpr_3, poly_gpr_4, poly_gpr_234, "Polynomial Kernel")
